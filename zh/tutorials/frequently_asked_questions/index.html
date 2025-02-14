@@ -1618,20 +1618,20 @@
 
 <h2 id="_1">常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="#q1-未定义符号">未定义符号</a></li>
-<li><a href="#q2-ascend-so库找不到相关错误">Ascend so库找不到相关错误</a></li>
+<li><a href="#q1">未定义符号</a></li>
+<li><a href="#q2-ascend-so">Ascend so库找不到相关错误</a></li>
 <li><a href="#q3-ascend-error-message-a39999">关于错误码 a39999</a></li>
 <li><a href="#q4-acl-open-device-0-failed">关于错误 acl open device 0 failed</a></li>
-<li><a href="#q5-windows安装mindocr依赖失败">windows安装mindocr依赖失败相关问题</a></li>
+<li><a href="#q5-windowsmindocr">windows安装mindocr依赖失败相关问题</a></li>
 <li><a href="#q6-runtimeerror-the-device-address-type-is-wrong-type-name-in-addresscpu-type-name-in-contextascend">关于 RunTimeError:The device address tpe is wrong</a></li>
-<li><a href="#q7-模型转换相关问题">模型转换相关问题</a></li>
-<li><a href="#q8-推理时相关问题">推理相关问题</a></li>
-<li><a href="#q9-DBNet训练速率不及预期">DBNet训练速率不及预期</a></li>
-<li><a href="#q10-libgomp-d22c30c5so100相关错误">libgomp-d22c30c5.so.1.0.0 相关错误</a></li>
-<li><a href="#q11-当在lmdb-dataset上训练abinet报数据管道错误">当在lmdb dataset上训练abinet报数据管道错误</a></li>
-<li><a href="#q12-当在synthtext数据集上训练dbnet报运行时错误">当在synthtext数据集上训练dbnet报运行时错误</a></li>
-<li><a href="#q13-安装seqeval相关错误">安装seqeval相关错误</a></li>
-<li><a href="#q14-安装lanms相关错误">安装lanms相关错误</a></li>
+<li><a href="#q7">模型转换相关问题</a></li>
+<li><a href="#q8">推理相关问题</a></li>
+<li><a href="#q9-dbnet">DBNet训练速率不及预期</a></li>
+<li><a href="#q10-libgomp-d22c30c5so100">libgomp-d22c30c5.so.1.0.0 相关错误</a></li>
+<li><a href="#q11-lmdb-datasetabinet">当在lmdb dataset上训练abinet报数据管道错误</a></li>
+<li><a href="#q12-synthtextdbnet">当在synthtext数据集上训练dbnet报运行时错误</a></li>
+<li><a href="#q13-seqeval">安装seqeval相关错误</a></li>
+<li><a href="#q14-lanms">安装lanms相关错误</a></li>
 </ul>
 <h3 id="q1">Q1 未定义符号<a class="headerlink" href="#q1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2428,28 +2428,29 @@ note:<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </sp
 <div class="highlight"><pre><span></span><code>ImportError:<span class="w"> </span>Python<span class="w"> </span>version<span class="w"> </span>mismatch:<span class="w"> </span>module<span class="w"> </span>was<span class="w"> </span>compiled<span class="w"> </span><span class="k">for</span><span class="w"> </span>version<span class="w"> </span><span class="m">3</span>.8,<span class="w"> </span><span class="k">while</span><span class="w"> </span>the<span class="w"> </span>interpreter<span class="w"> </span>is<span class="w"> </span>running<span class="w"> </span>version<span class="w"> </span><span class="m">3</span>.7.
 </code></pre></div>
 该问题可能是当前存在多个python3环境导致，你可使用以下步骤解决该问题
- - 执行<code>pip3 install lanms -i https://pypi.tuna.tsinghua.edu.cn/simple</code>，得到<code>lanms-1.0.2.tar.gz</code>的下载链接（如https://pypi.tuna.tsinghua.edu.cn/packages/96/c0/50dc2c857ed060e907adaef31184413a7706e475c322236d346382e45195/lanms-1.0.2.tar.gz）
- - 使用该下载链接，下载<code>lanms-1.0.2.tar.gz</code>，执行<code>tar -zxvf lanms-1.0.2.tar.gz</code>以解压该包
- - <code>cd lanms-1.0.2</code>
- - 编辑<code>Makefile</code>，在第1，2行中，用<code>python3.7-config</code>替代<code>python3-config</code>，得到如下修改
+ <ul>
+     <li>
+         执行<code>pip3 install lanms -i https://pypi.tuna.tsinghua.edu.cn/simple</code>，得到<code>lanms-1.0.2.tar.gz</code>的下载链接（如
+<span style="word-break: break-all;">https://pypi.tuna.tsinghua.edu.cn/packages/96/c0/50dc2c857ed060e907adaef31184413a7706e475c322236d346382e45195/lanms-1.0.2.tar.gz）</span>
+     </li>
+     <li>
+         使用该下载链接，下载<code>lanms-1.0.2.tar.gz</code>，执行<code>tar -zxvf lanms-1.0.2.tar.gz</code>以解压该包
+     </li>
+     <li>
+         <code>cd lanms-1.0.2</code>
+     </li>
+     <li>
+          编辑<code>Makefile</code>，在第1，2行中，用<code>python3.7-config</code>替代<code>python3-config</code>，得到如下修改
    <div class="highlight"><pre><span></span><code><span class="nv">CXXFLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-I<span class="w"> </span>include<span class="w">  </span>-std<span class="o">=</span>c++11<span class="w"> </span>-O3<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>python3.7-config<span class="w"> </span>--cflags<span class="k">)</span>
 <span class="nv">LDFLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>python3.7-config<span class="w"> </span>--ldflags<span class="k">)</span>
 ...
 </code></pre></div>
    保存该<code>Makefile</code>, 执行过程将匹配到python 3.7环境
- - 执行<code>python setup.py install</code>以安装<code>lanms</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
+     </li>
+     <li>
+          执行<code>python setup.py install</code>以安装<code>lanms</code></p>
+     </li>
+ </ul>
                 
               </article>
             </div>

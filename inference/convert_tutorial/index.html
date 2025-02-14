@@ -1688,7 +1688,7 @@ input_shape=x:[1,3,736,1280]
 <p><strong>Note: ascend 310 not support dynamic shape.</strong></p>
 <p>In some inference scenarios, such as detecting a target and then executing the target recognition network, the number and size of targets is not fixed resulting. If each inference is computed at the maximum Batch Size or maximum Image Size, it will result in wasted computational resources.</p>
 <p>Assuming the exported model input shape is (-1, 3, -1, -1), and the NHW axes are dynamic. Therefore, some optional values can be set during model conversion to adapt to input images of various size during inference.</p>
-<p><code>converter_lite</code> achieves this by setting the <code>dynamic_dims</code> parameter in <code>[ascend_context]</code> through <code>--configFile</code>. Please refer to the <a href="https://www.mindspore.cn/lite/docs/en/master/use/cloud_infer/converter_tool_ascend.html#dynamic-shape-configuration">Dynamic Shape Configuration</a> for details. We will refer to it as <strong>Model Shape Scaling</strong> for short.</p>
+<p><code>converter_lite</code> achieves this by setting the <code>dynamic_dims</code> parameter in <code>[ascend_context]</code> through <code>--configFile</code>. Please refer to the <a href="https://www.mindspore.cn/lite/docs/en/r2.2/use/cloud_infer/converter_tool_ascend.html#dynamic-shape-configuration">Dynamic Shape Configuration</a> for details. We will refer to it as <strong>Model Shape Scaling</strong> for short.</p>
 <p>So, there are two options for conversion, by setting different config.txt:</p>
 <ul>
 <li>
@@ -1717,7 +1717,7 @@ input_shape=x:[1,3,736,1280]
 <p>If the exported model is a static shape version, it cannot infer dynamic shape, and it is necessary to ensure that the exported model is a dynamic shape version.</p>
 <h3 id="22-model-precision-mode-setting">2.2 Model Precision Mode Setting<a class="headerlink" href="#22-model-precision-mode-setting" title="Permanent link">&para;</a></h3>
 <p>For the precision of model inference, it is necessary to set it in <code>converter_lite</code> when converting the model.
-Please refer to the <a href="https://www.mindspore.cn/lite/docs/en/master/use/cloud_infer/converter_tool_ascend.html#configuration-file">Ascend Conversion Tool Description</a>, the usage of <code>precision_mode</code> parameter is described in the table of the configuration file, you can choose <code>enforce_fp16</code>, <code>enforce_fp32</code>, <code>preferred_fp32</code> and <code>enforce_origin</code> etc.
+Please refer to the <a href="https://www.mindspore.cn/lite/docs/en/r2.2/use/cloud_infer/converter_tool_ascend.html#configuration-file">Ascend Conversion Tool Description</a>, the usage of <code>precision_mode</code> parameter is described in the table of the configuration file, you can choose <code>enforce_fp16</code>, <code>enforce_fp32</code>, <code>preferred_fp32</code> and <code>enforce_origin</code> etc.
 So, you can add the <code>precision_mode</code> parameter in the <code>[Ascend_context]</code> of the above config.txt file to set the precision mode:</p>
 <div class="highlight"><pre><span></span><code>[ascend_context]
 input_format=NCHW
