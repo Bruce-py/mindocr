@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -388,6 +388,7 @@
   
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -431,6 +432,7 @@
   
   <span class="md-ellipsis">
     Model Zoo
+    
   </span>
   
 
@@ -456,6 +458,7 @@
   
   <span class="md-ellipsis">
     Training
+    
   </span>
   
 
@@ -477,6 +480,7 @@
   
   <span class="md-ellipsis">
     Inference - MindOCR Models
+    
   </span>
   
 
@@ -498,6 +502,7 @@
   
   <span class="md-ellipsis">
     Inference - Third-party Models
+    
   </span>
   
 
@@ -551,6 +556,7 @@
   
   <span class="md-ellipsis">
     Tutorials
+    
   </span>
   
 
@@ -597,6 +603,7 @@
   
   <span class="md-ellipsis">
     1. Datasets
+    
   </span>
   
 
@@ -622,6 +629,7 @@
   
   <span class="md-ellipsis">
     Dataset Preparation
+    
   </span>
   
 
@@ -643,6 +651,7 @@
   
   <span class="md-ellipsis">
     Data Transformation Mechanism
+    
   </span>
   
 
@@ -699,6 +708,7 @@
   
   <span class="md-ellipsis">
     2. Model Training
+    
   </span>
   
 
@@ -724,6 +734,7 @@
   
   <span class="md-ellipsis">
     Yaml Configuration
+    
   </span>
   
 
@@ -745,6 +756,7 @@
   
   <span class="md-ellipsis">
     Text Detection
+    
   </span>
   
 
@@ -766,6 +778,7 @@
   
   <span class="md-ellipsis">
     Text Recognition
+    
   </span>
   
 
@@ -787,6 +800,7 @@
   
   <span class="md-ellipsis">
     Distributed Training
+    
   </span>
   
 
@@ -808,6 +822,7 @@
   
   <span class="md-ellipsis">
     Advance Training
+    
   </span>
   
 
@@ -864,6 +879,7 @@
   
   <span class="md-ellipsis">
     3. Inference and Deployment
+    
   </span>
   
 
@@ -889,6 +905,7 @@
   
   <span class="md-ellipsis">
     Python Online Inference
+    
   </span>
   
 
@@ -910,6 +927,7 @@
   
   <span class="md-ellipsis">
     MindOCR Offline Inference
+    
   </span>
   
 
@@ -931,6 +949,7 @@
   
   <span class="md-ellipsis">
     Inference - MindOCR Models
+    
   </span>
   
 
@@ -952,6 +971,7 @@
   
   <span class="md-ellipsis">
     Inference - Third-party Models
+    
   </span>
   
 
@@ -973,6 +993,7 @@
   
   <span class="md-ellipsis">
     Model Conversion
+    
   </span>
   
 
@@ -1027,6 +1048,7 @@
   
   <span class="md-ellipsis">
     4. Developer Guides
+    
   </span>
   
 
@@ -1052,6 +1074,7 @@
   
   <span class="md-ellipsis">
     Customize Dataset
+    
   </span>
   
 
@@ -1073,6 +1096,7 @@
   
   <span class="md-ellipsis">
     Customize Data Transformation
+    
   </span>
   
 
@@ -1094,6 +1118,7 @@
   
   <span class="md-ellipsis">
     Customize a New Model
+    
   </span>
   
 
@@ -1115,6 +1140,7 @@
   
   <span class="md-ellipsis">
     Customize Postprocessing Method
+    
   </span>
   
 
@@ -1177,6 +1203,7 @@
   
   <span class="md-ellipsis">
     Notes
+    
   </span>
   
 
@@ -1202,6 +1229,7 @@
   
   <span class="md-ellipsis">
     Contributing
+    
   </span>
   
 
@@ -1230,6 +1258,7 @@
   
   <span class="md-ellipsis">
     FAQ
+    
   </span>
   
 
@@ -1241,6 +1270,7 @@
   
   <span class="md-ellipsis">
     FAQ
+    
   </span>
   
 
@@ -1594,6 +1624,7 @@
               <article class="md-content__inner md-typeset">
                 
                   
+
 
   
     <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/tutorials/frequently_asked_questions.md" title="Edit this page" class="md-content__button md-icon">
@@ -2192,9 +2223,11 @@ Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </
 <span class="w">    </span>raise<span class="w"> </span>RuntimeError<span class="o">(</span>f<span class="s2">&quot;build_from_file failed! Error is {ret.ToString()}&quot;</span><span class="o">)</span>
 RuntimeError:<span class="w"> </span>build_from_file<span class="w"> </span>failed!<span class="w"> </span>Error<span class="w"> </span>is<span class="w"> </span>Common<span class="w"> </span>error<span class="w"> </span>code.
 </code></pre></div>
-<p>Reason:
-- Cloud-Side <code>mindir</code> model should convert to Device-Side <code>mindir</code> model first.
-- Mismatch version of <code>converter_lite</code> tool and <code>mindspore_lite</code>. For example, it may fail when using <code>converter_lite 2.2</code> to get Device-Side <code>mindir</code>, and do inference with <code>mindspore_lite 2.1</code>.</p>
+<p>Reason:</p>
+<ul>
+<li>Cloud-Side <code>mindir</code> model should convert to Device-Side <code>mindir</code> model first.</li>
+<li>Mismatch version of <code>converter_lite</code> tool and <code>mindspore_lite</code>. For example, it may fail when using <code>converter_lite 2.2</code> to get Device-Side <code>mindir</code>, and do inference with <code>mindspore_lite 2.1</code>.</li>
+</ul>
 <h3 id="q8-problems-related-to-inference">Q8 Problems related to inference<a class="headerlink" href="#q8-problems-related-to-inference" title="Permanent link">&para;</a></h3>
 <ul>
 <li>When doing inference with <code>deploy/py_infer/infer.py</code>, it may occur <code>TypeError: unhashable type: 'numpy.ndarray'</code></li>
@@ -2274,17 +2307,23 @@ TypeError:<span class="w"> </span>unhashable<span class="w"> </span>type:<span c
 <p>The following error may occur when running mindocr
 <div class="highlight"><pre><span></span><code>ImportError:<span class="w"> </span>/root/mindocr_env/lib/python3.8/site-packages/sklearn/__check_build/../../scikit_learn.libs/libgomp-d22c30c5.so.1.0.0:<span class="w"> </span>cannot<span class="w"> </span>allocate<span class="w"> </span>memory<span class="w"> </span><span class="k">in</span><span class="w"> </span>static<span class="w"> </span>TLS<span class="w"> </span>block
 </code></pre></div>
-You can try the following steps to fix it:
- - search <code>libgomp-d22c30c5.so.1.0.0</code> in your python install path
+You can try the following steps to fix it:</p>
+<ul>
+<li>
+<p>search <code>libgomp-d22c30c5.so.1.0.0</code> in your python install path
    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/root/mindocr_env/lib/python3.8
 find<span class="w"> </span>~<span class="w"> </span>-name<span class="w"> </span>libgomp-d22c30c5.so.1.0.0
 </code></pre></div>
    and get the following search result:
    <div class="highlight"><pre><span></span><code>/root/mindocr_env/lib/python3.8/site-packages/scikit_learn.libs/libgomp-d22c30c5.so.1.0.0
-</code></pre></div>
- - Add the so file to environment variable <code>LD_PRELOAD</code>
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the so file to environment variable <code>LD_PRELOAD</code>
    <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">LD_PRELOAD</span><span class="o">=</span>/root/mindocr_env/lib/python3.8/site-packages/scikit_learn.libs/libgomp-d22c30c5.so.1.0.0:<span class="nv">$LD_PRELOAD</span>
 </code></pre></div></p>
+</li>
+</ul>
 <h3 id="q11-dataset-pipeline-error-when-training-abinet-on-lmdb-dataset">Q11 Dataset Pipeline Error when training abinet on lmdb dataset<a class="headerlink" href="#q11-dataset-pipeline-error-when-training-abinet-on-lmdb-dataset" title="Permanent link">&para;</a></h3>
 <p>The following error may occur when training abinet on lmdb dataset
 <div class="highlight"><pre><span></span><code>mindocr.data.rec_lmdb_dataset<span class="w"> </span>WARNING<span class="w"> </span>-<span class="w"> </span>Error<span class="w"> </span>occurred<span class="w"> </span>during<span class="w"> </span>preprocess.
@@ -2300,10 +2339,12 @@ find<span class="w"> </span>~<span class="w"> </span>-name<span class="w"> </spa
 ------------------------------------------------------------------
 mindspore/ccsrc/minddata/dataset/kernels/py_func_op.cc<span class="o">(</span><span class="m">143</span><span class="o">)</span>.
 </code></pre></div>
-You can try the following steps to fix it:
- - find the folder of mindspore package
- - open file: <code>mindspore/dataset/transforms/transform.py</code>
- - switch to line 93:
+You can try the following steps to fix it:</p>
+<ul>
+<li>find the folder of mindspore package</li>
+<li>open file: <code>mindspore/dataset/transforms/transform.py</code></li>
+<li>
+<p>switch to line 93:
   <div class="highlight"><pre><span></span><code><span class="m">93</span><span class="w">        </span><span class="k">if</span><span class="w"> </span>key<span class="w"> </span><span class="k">in</span><span class="w"> </span>EXECUTORS_LIST:
 <span class="m">94</span><span class="w">           </span><span class="c1"># get the executor by process id and thread id</span>
 <span class="m">95</span><span class="w">            </span><span class="nv">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>EXECUTORS_LIST<span class="o">[</span>key<span class="o">]</span>
@@ -2314,8 +2355,10 @@ You can try the following steps to fix it:
 <span class="m">100</span><span class="w">           </span><span class="nv">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>cde.Execute<span class="o">(</span>self.parse<span class="o">())</span>
 <span class="m">101</span><span class="w">           </span><span class="c1"># add the executor the global EXECUTORS_LIST</span>
 <span class="m">102</span><span class="w">           </span>EXECUTORS_LIST<span class="o">[</span>key<span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>executor
-</code></pre></div>
- - replace line 97 with <code>executor = cde.Execute(self.parse())</code>, and get
+</code></pre></div></p>
+</li>
+<li>
+<p>replace line 97 with <code>executor = cde.Execute(self.parse())</code>, and get
   <div class="highlight"><pre><span></span><code><span class="m">93</span><span class="w">        </span><span class="k">if</span><span class="w"> </span>key<span class="w"> </span><span class="k">in</span><span class="w"> </span>EXECUTORS_LIST:
 <span class="m">94</span><span class="w">            </span><span class="c1"># get the executor by process id and thread id</span>
 <span class="m">95</span><span class="w">            </span><span class="nv">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>EXECUTORS_LIST<span class="o">[</span>key<span class="o">]</span>
@@ -2326,8 +2369,12 @@ You can try the following steps to fix it:
 <span class="m">100</span><span class="w">           </span><span class="nv">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>cde.Execute<span class="o">(</span>self.parse<span class="o">())</span>
 <span class="m">101</span><span class="w">           </span><span class="c1"># add the executor the global EXECUTORS_LIST</span>
 <span class="m">102</span><span class="w">           </span>EXECUTORS_LIST<span class="o">[</span>key<span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>executor
-</code></pre></div>
-  - save the file, and try to train the model.</p>
+</code></pre></div></p>
+</li>
+<li>
+<p>save the file, and try to train the model.</p>
+</li>
+</ul>
 <h3 id="q12-runtime-error-when-training-dbnet-on-synthtext-dataset">Q12 Runtime Error when training dbnet on synthtext dataset<a class="headerlink" href="#q12-runtime-error-when-training-dbnet-on-synthtext-dataset" title="Permanent link">&para;</a></h3>
 <p>Runtime Error occur as following when training dbnet on synthtext dataset:
 <div class="highlight"><pre><span></span><code>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
@@ -2406,40 +2453,33 @@ error:<span class="w"> </span>metadata-generation-failed
 
 note:<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>issue<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>package<span class="w"> </span>mentioned<span class="w"> </span>above,<span class="w"> </span>not<span class="w"> </span>pip.
 </code></pre></div>
-Please try the following steps to fix this problem：
- - Update <code>setuptools</code>: <code>pip3 install --upgrade setuptools</code>
- - Update <code>setuptools_scm</code>: <code>pip3 install --upgrade setuptools_scm</code>
- - Install <code>seqeval</code>：<code>pip3 install seqeval -i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
+Please try the following steps to fix this problem:</p>
+<ul>
+<li>Update <code>setuptools</code>: <code>pip3 install --upgrade setuptools</code></li>
+<li>Update <code>setuptools_scm</code>: <code>pip3 install --upgrade setuptools_scm</code></li>
+<li>Install <code>seqeval</code>: <code>pip3 install seqeval -i https://pypi.tuna.tsinghua.edu.cn/simple</code></li>
+</ul>
 <h3 id="q14-failed-to-install-lanms">Q14 Failed to install lanms<a class="headerlink" href="#q14-failed-to-install-lanms" title="Permanent link">&para;</a></h3>
 <p>The following error occur when installing lanms
 <div class="highlight"><pre><span></span><code>ImportError:<span class="w"> </span>Python<span class="w"> </span>version<span class="w"> </span>mismatch:<span class="w"> </span>module<span class="w"> </span>was<span class="w"> </span>compiled<span class="w"> </span><span class="k">for</span><span class="w"> </span>version<span class="w"> </span><span class="m">3</span>.8,<span class="w"> </span><span class="k">while</span><span class="w"> </span>the<span class="w"> </span>interpreter<span class="w"> </span>is<span class="w"> </span>running<span class="w"> </span>version<span class="w"> </span><span class="m">3</span>.7.
 </code></pre></div>
-Some Python 3.7 environment may meet this problem when multiple python3 environment exists. You could try the following steps to solve this problem:
-1. run <code>pip3 install lanms -i https://pypi.tuna.tsinghua.edu.cn/simple</code>, and get the url for downloading <code>lanms-1.0.2.tar.gz</code>(like https://pypi.tuna.tsinghua.edu.cn/packages/96/c0/50dc2c857ed060e907adaef31184413a7706e475c322236d346382e45195/lanms-1.0.2.tar.gz)
-2. use this url and dowload the <code>lanms-1.0.2.tar.gz</code>, run <code>tar -zxvf lanms-1.0.2.tar.gz</code> to decompress the package.
-3. <code>cd lanms-1.0.2</code>
-4. edit the <code>Makefile</code>, replace <code>python3-config</code> with <code>python3.7-config</code> in line 1 and line 2, and you could get
+Some Python 3.7 environment may meet this problem when multiple python3 environment exists. You could try the following steps to solve this problem:</p>
+<ul>
+<li>run <code>pip3 install lanms -i https://pypi.tuna.tsinghua.edu.cn/simple</code>, and get the url for downloading <code>lanms-1.0.2.tar.gz</code>(like https://pypi.tuna.tsinghua.edu.cn/packages/96/c0/50dc2c857ed060e907adaef31184413a7706e475c322236d346382e45195/lanms-1.0.2.tar.gz)</li>
+<li>use this url and dowload the <code>lanms-1.0.2.tar.gz</code>, run <code>tar -zxvf lanms-1.0.2.tar.gz</code> to decompress the package.</li>
+<li><code>cd lanms-1.0.2</code></li>
+<li>
+<p>edit the <code>Makefile</code>, replace <code>python3-config</code> with <code>python3.7-config</code> in line 1 and line 2, and you could get
    <div class="highlight"><pre><span></span><code>CXXFLAGS = -I include  -std=c++11 -O3 $(shell python3.7-config --cflags)
 LDFLAGS = $(shell python3.7-config --ldflags)
 ...
 </code></pre></div>
-   save <code>Makefile</code>. So that the make process would exactly compile with python3.7 environment
-5. run <code>python setup.py install</code> and completely install lanms.</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>dca11cc9989deabe86985f0729502266e5ba6f42</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+   save <code>Makefile</code>. So that the make process would exactly compile with python3.7 environment </p>
+</li>
+<li>
+<p>run <code>python setup.py install</code> and completely install lanms.</p>
+</li>
+</ul>
 
 
 
@@ -2554,7 +2594,7 @@ LDFLAGS = $(shell python3.7-config --ldflags)
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.action.view", "content.action.edit", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotations"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
     
   </body>

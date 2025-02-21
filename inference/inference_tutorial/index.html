@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -392,6 +392,7 @@
   
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -435,6 +436,7 @@
   
   <span class="md-ellipsis">
     Model Zoo
+    
   </span>
   
 
@@ -460,6 +462,7 @@
   
   <span class="md-ellipsis">
     Training
+    
   </span>
   
 
@@ -481,6 +484,7 @@
   
   <span class="md-ellipsis">
     Inference - MindOCR Models
+    
   </span>
   
 
@@ -502,6 +506,7 @@
   
   <span class="md-ellipsis">
     Inference - Third-party Models
+    
   </span>
   
 
@@ -560,6 +565,7 @@
   
   <span class="md-ellipsis">
     Tutorials
+    
   </span>
   
 
@@ -609,6 +615,7 @@
   
   <span class="md-ellipsis">
     1. Datasets
+    
   </span>
   
 
@@ -634,6 +641,7 @@
   
   <span class="md-ellipsis">
     Dataset Preparation
+    
   </span>
   
 
@@ -655,6 +663,7 @@
   
   <span class="md-ellipsis">
     Data Transformation Mechanism
+    
   </span>
   
 
@@ -714,6 +723,7 @@
   
   <span class="md-ellipsis">
     2. Model Training
+    
   </span>
   
 
@@ -739,6 +749,7 @@
   
   <span class="md-ellipsis">
     Yaml Configuration
+    
   </span>
   
 
@@ -760,6 +771,7 @@
   
   <span class="md-ellipsis">
     Text Detection
+    
   </span>
   
 
@@ -781,6 +793,7 @@
   
   <span class="md-ellipsis">
     Text Recognition
+    
   </span>
   
 
@@ -802,6 +815,7 @@
   
   <span class="md-ellipsis">
     Distributed Training
+    
   </span>
   
 
@@ -823,6 +837,7 @@
   
   <span class="md-ellipsis">
     Advance Training
+    
   </span>
   
 
@@ -884,6 +899,7 @@
   
   <span class="md-ellipsis">
     3. Inference and Deployment
+    
   </span>
   
 
@@ -909,6 +925,7 @@
   
   <span class="md-ellipsis">
     Python Online Inference
+    
   </span>
   
 
@@ -939,6 +956,7 @@
   
   <span class="md-ellipsis">
     MindOCR Offline Inference
+    
   </span>
   
 
@@ -950,6 +968,7 @@
   
   <span class="md-ellipsis">
     MindOCR Offline Inference
+    
   </span>
   
 
@@ -1120,6 +1139,7 @@
   
   <span class="md-ellipsis">
     Inference - MindOCR Models
+    
   </span>
   
 
@@ -1141,6 +1161,7 @@
   
   <span class="md-ellipsis">
     Inference - Third-party Models
+    
   </span>
   
 
@@ -1162,6 +1183,7 @@
   
   <span class="md-ellipsis">
     Model Conversion
+    
   </span>
   
 
@@ -1219,6 +1241,7 @@
   
   <span class="md-ellipsis">
     4. Developer Guides
+    
   </span>
   
 
@@ -1244,6 +1267,7 @@
   
   <span class="md-ellipsis">
     Customize Dataset
+    
   </span>
   
 
@@ -1265,6 +1289,7 @@
   
   <span class="md-ellipsis">
     Customize Data Transformation
+    
   </span>
   
 
@@ -1286,6 +1311,7 @@
   
   <span class="md-ellipsis">
     Customize a New Model
+    
   </span>
   
 
@@ -1307,6 +1333,7 @@
   
   <span class="md-ellipsis">
     Customize Postprocessing Method
+    
   </span>
   
 
@@ -1364,6 +1391,7 @@
   
   <span class="md-ellipsis">
     Notes
+    
   </span>
   
 
@@ -1389,6 +1417,7 @@
   
   <span class="md-ellipsis">
     Contributing
+    
   </span>
   
 
@@ -1410,6 +1439,7 @@
   
   <span class="md-ellipsis">
     FAQ
+    
   </span>
   
 
@@ -1595,6 +1625,7 @@
                 
                   
 
+
   
     <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/inference/inference_tutorial.md" title="Edit this page" class="md-content__button md-icon">
       
@@ -1733,60 +1764,206 @@ word_1657.png  &quot;candy&quot;
 word_1814.png  &quot;cathay&quot;
 </code></pre></div>
 <h3 id="46-detail-of-inference-parameter">4.6 Detail of inference parameter<a class="headerlink" href="#46-detail-of-inference-parameter" title="Permanent link">&para;</a></h3>
-<details>
+<details open="open">
 <summary> Details </summary>
-
-- Basic settings
-
-  | name             | type | default | description                                              |
-  |:-----------------|:-----|:--------|:---------------------------------------------------------|
-  | input_images_dir | str  | None    | Image or folder path for inference                       |
-  | device           | str  | Ascend  | Device type, support Ascend                              |
-  | device_id        | int  | 0       | Device id                                                |
-  | backend          | str  | lite    | Inference backend, support lite                     |
-  | parallel_num     | int  | 1       | Number of parallel in each stage of pipeline parallelism |
-  | precision_mode   | str  | None    | Precision mode, only supports setting by [Model Conversion](convert_tutorial.md) currently, and it takes no effect here |
-
-- Saving Result
-
-  | name                  | type | default           | description                                            |
-  |:----------------------|:-----|:------------------|:-------------------------------------------------------|
-  | res_save_dir          | str  | inference_results | Saving dir for inference results                       |
-  | vis_det_save_dir      | str  | None              | Saving dir for images of with detection boxes          |
-  | vis_pipeline_save_dir | str  | None              | Saving dir for images of with detection boxes and text |
-  | vis_font_path         | str  | None              | Font path for drawing text                             |
-  | crop_save_dir         | str  | None              | Saving path for cropped images after detection         |
-  | show_log              | bool | False             | Whether show log when inferring                        |
-  | save_log_dir          | str  | None              | Log saving dir                                         |
-
-- Text detection
-
-  | name                     | type | default | description                                            |
-  |:-------------------------|:-----|:--------|:-------------------------------------------------------|
-  | det_model_path           | str  | None    | Model path for text detection                          |
-  | det_model_name_or_config | str  | None    | Model name or YAML config file path for text detection |
-
-- Text angle classification
-
-  | name                     | type | default | description                                                       |
-  |:-------------------------|:-----|:--------|:------------------------------------------------------------------|
-  | cls_model_path           | str  | None    | Model path for text angle classification                          |
-  | cls_model_name_or_config | str  | None    | Model name or YAML config file path for text angle classification |
-
-- Text recognition
-
-  | name                     | type | default | description                                                                 |
-  |:-------------------------|:-----|:--------|:----------------------------------------------------------------------------|
-  | rec_model_path           | str  | None    | Model path for text recognition                                             |
-  | rec_model_name_or_config | str  | None    | Model name or YAML config file path for text recognition                    |
-  | character_dict_path      | str  | None    | Dict file for text recognition，default only supports numbers and lowercase |
-
-Notes：
-
-`*_model_name_or_config` can be the model name or YAML config file path, please refer to [MindOCR models list](mindocr_models_list.md)，[PPOCR models list](thirdparty_models_list.md).
-
+<ul>
+<li>Basic settings</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">input_images_dir</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Image or folder path for inference</td>
+</tr>
+<tr>
+<td style="text-align: left;">device</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">Ascend</td>
+<td style="text-align: left;">Device type, support Ascend</td>
+</tr>
+<tr>
+<td style="text-align: left;">device_id</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">Device id</td>
+</tr>
+<tr>
+<td style="text-align: left;">backend</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">lite</td>
+<td style="text-align: left;">Inference backend, support lite</td>
+</tr>
+<tr>
+<td style="text-align: left;">parallel_num</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Number of parallel in each stage of pipeline parallelism</td>
+</tr>
+<tr>
+<td style="text-align: left;">precision_mode</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Precision mode, only supports setting by <a href="../convert_tutorial/">Model Conversion</a> currently, and it takes no effect here</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Saving Result</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">res_save_dir</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">inference_results</td>
+<td style="text-align: left;">Saving dir for inference results</td>
+</tr>
+<tr>
+<td style="text-align: left;">vis_det_save_dir</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Saving dir for images of with detection boxes</td>
+</tr>
+<tr>
+<td style="text-align: left;">vis_pipeline_save_dir</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Saving dir for images of with detection boxes and text</td>
+</tr>
+<tr>
+<td style="text-align: left;">vis_font_path</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Font path for drawing text</td>
+</tr>
+<tr>
+<td style="text-align: left;">crop_save_dir</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Saving path for cropped images after detection</td>
+</tr>
+<tr>
+<td style="text-align: left;">show_log</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">False</td>
+<td style="text-align: left;">Whether show log when inferring</td>
+</tr>
+<tr>
+<td style="text-align: left;">save_log_dir</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Log saving dir</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Text detection</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">det_model_path</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Model path for text detection</td>
+</tr>
+<tr>
+<td style="text-align: left;">det_model_name_or_config</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Model name or YAML config file path for text detection</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Text angle classification</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">cls_model_path</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Model path for text angle classification</td>
+</tr>
+<tr>
+<td style="text-align: left;">cls_model_name_or_config</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Model name or YAML config file path for text angle classification</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Text recognition</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">rec_model_path</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Model path for text recognition</td>
+</tr>
+<tr>
+<td style="text-align: left;">rec_model_name_or_config</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Model name or YAML config file path for text recognition</td>
+</tr>
+<tr>
+<td style="text-align: left;">character_dict_path</td>
+<td style="text-align: left;">str</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Dict file for text recognition，default only supports numbers and lowercase</td>
+</tr>
+</tbody>
+</table>
+<p>Notes：</p>
+<p><code>*_model_name_or_config</code> can be the model name or YAML config file path, please refer to <a href="../mindocr_models_list/">MindOCR models list</a>，<a href="../thirdparty_models_list/">PPOCR models list</a>.</p>
 </details>
-
 <h2 id="5-model-inference-evaluation">5. Model Inference Evaluation<a class="headerlink" href="#5-model-inference-evaluation" title="Permanent link">&para;</a></h2>
 <h3 id="51-text-detection">5.1 Text detection<a class="headerlink" href="#51-text-detection" title="Permanent link">&para;</a></h3>
 <p>After inference, please use the following command to evaluate the results:</p>
@@ -1933,7 +2110,7 @@ Notes：
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.action.view", "content.action.edit", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotations"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
     
   </body>
