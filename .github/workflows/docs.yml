@@ -22,19 +22,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements/docs.txt
           
-          ln -s README.md docs/en/README.md
-          ln -s mindocr/models/README.md docs/en/mkdocs/mindocr_data_readme.md
-          
-          sed -i 's|(docs/en/|(|g' docs/en/README.md
+          ln -s $PWD/README.md $PWD/docs/en/README.md
+          ln -s $PWD/mindocr/models/README.md $PWD/docs/en/mkdocs/mindocr_data_readme.md
+          sed -i 's|(docs/en/|(|g' $PWD/docs/en/README.md
+          sed -i 's|(CONTRIBUTING.md)|(mkdocs/contributing.md)|g' $PWD/docs/en/README.md
+          sed -i 's|(LICENSE)|(mkdocs/license.md)|g' $PWD/docs/en/README.md
+          sed -i 's|(tools/infer/text/README.md)|(mkdocs/online_inference.md)|g' $PWD/docs/en/README.md
+          sed -i 's|(mindocr/data/README.md)|(mkdocs/customize_dataset.md)|g' $PWD/docs/en/README.md
+          sed -i 's|(mindocr/data/transforms/README.md)|(mkdocs/customize_data_transform.md)|g' $PWD/docs/en/README.md
+          sed -i 's|(mindocr/models/README.md)|(mkdocs/customize_model.md)|g' $PWD/docs/en/README.md
+          sed -i 's|(mindocr/postprocess/README.md)|(mkdocs/customize_postprocess.md)|g' $PWD/docs/en/README.md
 
-          sed -i 's|(CONTRIBUTING.md)|(mkdocs/contributing.md)|g' docs/en/README.md
-          sed -i 's|(LICENSE)|(mkdocs/license.md)|g' docs/en/README.md
-          sed -i 's|(tools/infer/text/README.md)|(mkdocs/online_inference.md)|g' docs/en/README.md
-
-          sed -i 's|(mindocr/data/README.md)|(mkdocs/customize_dataset.md)|g' docs/en/README.md
-          sed -i 's|(mindocr/data/transforms/README.md)|(mkdocs/customize_data_transform.md)|g' docs/en/README.md
-          sed -i 's|(mindocr/models/README.md)|(mkdocs/customize_model.md)|g' docs/en/README.md
-          sed -i 's|(mindocr/postprocess/README.md)|(mkdocs/customize_postprocess.md)|g' docs/en/README.md
       - name: Build site
         run: mkdocs build
       - name: Deploy to gh-pages
