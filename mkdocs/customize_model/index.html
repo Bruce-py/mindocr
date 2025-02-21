@@ -1532,12 +1532,12 @@
 <li>
 <p>For each module:</p>
 <p>a. if it is implemented in MindOCR, skip since you can get the module by the <code>build_{module}</code> function .</p>
-<p>b. if not, please implement it and follow the <a href="../../../mindocr/models#format-guideline-for-writing-a-new-module">module format guideline</a></p>
+<p>b. if not, please implement it and follow the <a href="#format-guideline-for-writing-a-new-module">module format guideline</a></p>
 </li>
 <li>
 <p>Define your model in two ways</p>
-<p>a. Write a model py file, which includes the model class and specification functions. Please follow the <a href="../../../mindocr/models#format-guideline-for-model-py-file">model format guideline</a>. It is to allows users to invoke a pre-defined model easily, such as <code>model = build_model('dbnet_resnet50', pretrained=True)</code>  .</p>
-<p>b. Config the architecture in a yaml file. Please follow the <a href="../../../mindocr/models#format-guideline-for-yaml-file">yaml format guideline</a> . It is to allows users to modify a base architecture quickly in yaml file.</p>
+<p>a. Write a model py file, which includes the model class and specification functions. Please follow the <a href="#format-guideline-for-model-py-file">model format guideline</a>. It is to allows users to invoke a pre-defined model easily, such as <code>model = build_model('dbnet_resnet50', pretrained=True)</code>  .</p>
+<p>b. Config the architecture in a yaml file. Please follow the <a href="#format-guideline-for-yaml-file">yaml format guideline</a> . It is to allows users to modify a base architecture quickly in yaml file.</p>
 </li>
 <li>
 <p>To verify the correctness of the written model, please add your yaml config file path in <code>test_models.py</code>, modify the main function to build the desired model, and then run <code>test_models.py</code></p>

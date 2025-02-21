@@ -860,47 +860,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ascend" class="md-nav__link">
+  <a href="#ascend" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Ascend
+      Ascend
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Ascend">
+    <nav class="md-nav" aria-label="Ascend">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-run-scripts-with-openmpi" class="md-nav__link">
+  <a href="#run-scripts-with-openmpi" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1 Run scripts with OpenMPI
+      Run scripts with OpenMPI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-configure-rank_table_file-for-training" class="md-nav__link">
+  <a href="#configure-rank_table_file-for-training" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2 Configure RANK_TABLE_FILE for training
+      Configure RANK_TABLE_FILE for training
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2 Configure RANK_TABLE_FILE for training">
+    <nav class="md-nav" aria-label="Configure RANK_TABLE_FILE for training">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#121-running-on-eight-all-devices" class="md-nav__link">
+  <a href="#running-on-eight-all-devices" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.1 Running on Eight (All) Devices
+      Running on Eight (All) Devices
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#122-running-on-four-partial-devices" class="md-nav__link">
+  <a href="#running-on-four-partial-devices" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.2 Running on Four (Partial) Devices
+      Running on Four (Partial) Devices
     </span>
   </a>
   
@@ -1411,47 +1411,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ascend" class="md-nav__link">
+  <a href="#ascend" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Ascend
+      Ascend
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Ascend">
+    <nav class="md-nav" aria-label="Ascend">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-run-scripts-with-openmpi" class="md-nav__link">
+  <a href="#run-scripts-with-openmpi" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1 Run scripts with OpenMPI
+      Run scripts with OpenMPI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-configure-rank_table_file-for-training" class="md-nav__link">
+  <a href="#configure-rank_table_file-for-training" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2 Configure RANK_TABLE_FILE for training
+      Configure RANK_TABLE_FILE for training
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2 Configure RANK_TABLE_FILE for training">
+    <nav class="md-nav" aria-label="Configure RANK_TABLE_FILE for training">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#121-running-on-eight-all-devices" class="md-nav__link">
+  <a href="#running-on-eight-all-devices" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.1 Running on Eight (All) Devices
+      Running on Eight (All) Devices
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#122-running-on-four-partial-devices" class="md-nav__link">
+  <a href="#running-on-four-partial-devices" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.2 Running on Four (Partial) Devices
+      Running on Four (Partial) Devices
     </span>
   </a>
   
@@ -1505,17 +1505,7 @@ There are two ways to train on the Ascend AI processor: by running scripts with 
 <blockquote>
 <p>Please ensure that the <code>distribute</code> parameter in the yaml file is set to <code>True</code> before running the following commands for distributed training.</p>
 </blockquote>
-<ul>
-<li><a href="#distributed-parallel-training">Distributed parallel training</a></li>
-<li><a href="#1-ascend">1. Ascend</a><ul>
-<li><a href="#11-run-scripts-with-openmpi">1.1 Run scripts with OpenMPI</a></li>
-<li><a href="#12-configure-rank_table_file-for-training">1.2 Configure RANK_TABLE_FILE for training</a></li>
-<li><a href="#121-running-on-eight-all-devices">1.2.1 Running on Eight (All) Devices</a></li>
-<li><a href="#122-running-on-four-partial-devices">1.2.2 Running on Four (Partial) Devices</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="1-ascend">1. Ascend<a class="headerlink" href="#1-ascend" title="Permanent link">&para;</a></h2>
+<h2 id="ascend">Ascend<a class="headerlink" href="#ascend" title="Permanent link">&para;</a></h2>
 <p><strong>Notes</strong>:</p>
 <p>On Ascend platform, some common restrictions on using the distributed service are as follows:</p>
 <ul>
@@ -1526,7 +1516,7 @@ There are two ways to train on the Ascend AI processor: by running scripts with 
 <p>Each host has four devices numbered 0 to 3 and four devices numbered 4 to 7 deployed on two different networks. During training of 2 or 4 devices, the devices must be connected and clusters cannot be created across networks. This means, when training with 4 devices, only <code>{0, 1, 2, 3}</code> and  <code>{4, 5, 6, 7}</code> are available. While in training with 2 devices, devices cross networks, such as <code>{0, 4}</code> are not allowed. However, devices within networks, such as <code>{0, 1}</code>or <code>{1, 2}</code>, are allowed.</p>
 </li>
 </ul>
-<h3 id="11-run-scripts-with-openmpi">1.1 Run scripts with OpenMPI<a class="headerlink" href="#11-run-scripts-with-openmpi" title="Permanent link">&para;</a></h3>
+<h3 id="run-scripts-with-openmpi">Run scripts with OpenMPI<a class="headerlink" href="#run-scripts-with-openmpi" title="Permanent link">&para;</a></h3>
 <p>On Ascend hardware platform, users can use OpenMPI's <code>mpirun</code> to run distributed training with <code>n</code> devices. For example, in <a href="https://github.com/mindspore-lab/mindocr/blob/main/configs/det/dbnet/README.md#34-training">DBNet Readme</a>, the following command is used to train the model on devices <code>0</code> and <code>1</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># n is the number of NPUs used in training</span>
 mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/det/dbnet/db_r50_icdar15.yaml
@@ -1534,8 +1524,8 @@ mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span
 <blockquote>
 <p>Note that <code>mpirun</code> will run training on sequential devices starting from device <code>0</code>. For example, <code>mpirun -n 4 python-command</code> will run training on the four devices: <code>{0, 1, 2, 3}</code>.</p>
 </blockquote>
-<h3 id="12-configure-rank_table_file-for-training">1.2 Configure RANK_TABLE_FILE for training<a class="headerlink" href="#12-configure-rank_table_file-for-training" title="Permanent link">&para;</a></h3>
-<h4 id="121-running-on-eight-all-devices">1.2.1 Running on Eight (All) Devices<a class="headerlink" href="#121-running-on-eight-all-devices" title="Permanent link">&para;</a></h4>
+<h3 id="configure-rank_table_file-for-training">Configure RANK_TABLE_FILE for training<a class="headerlink" href="#configure-rank_table_file-for-training" title="Permanent link">&para;</a></h3>
+<h4 id="running-on-eight-all-devices">Running on Eight (All) Devices<a class="headerlink" href="#running-on-eight-all-devices" title="Permanent link">&para;</a></h4>
 <p>Before using this method for distributed training, it is necessary to create an HCCL configuration file in json format,
 i.e. generate RANK_TABLE_FILE. The following is the command to generate the corresponding configuration file for 8 devices
 (for more information please refer to <a href="https://gitee.com/mindspore/models/tree/master/utils/hccl_tools">HCCL tools</a>):</p>
@@ -1626,7 +1616,7 @@ This command produces the following output file:
 </code></pre></div>
 When training other models, simply replace the yaml config file path in the script, i.e. <code>path/to/model_config.yaml</code>.</p>
 <p>After the training has started, and you can find the training log <code>train.log</code> in the project root directory.</p>
-<h4 id="122-running-on-four-partial-devices">1.2.2 Running on Four (Partial) Devices<a class="headerlink" href="#122-running-on-four-partial-devices" title="Permanent link">&para;</a></h4>
+<h4 id="running-on-four-partial-devices">Running on Four (Partial) Devices<a class="headerlink" href="#running-on-four-partial-devices" title="Permanent link">&para;</a></h4>
 <p>To run training on four devices, for example, <code>{4, 5, 6, 7}</code>, the <code>RANK_TABLE_FILE</code> and the run script are different from those for running on eight devices.</p>
 <p>The <code>rank_table.json</code> is created by running the following command:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>hccl_tools.py<span class="w"> </span>--device_num<span class="w"> </span><span class="s2">&quot;[4,8)&quot;</span>

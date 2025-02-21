@@ -1294,22 +1294,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-version-matching-table" class="md-nav__link">
+  <a href="#version-matching-table" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Version Matching Table
+      Version Matching Table
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-ascend-environment-installation" class="md-nav__link">
+  <a href="#ascend-environment-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Ascend Environment Installation
+      Ascend Environment Installation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Ascend Environment Installation">
+    <nav class="md-nav" aria-label="Ascend Environment Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1336,27 +1336,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-mindspore-install" class="md-nav__link">
+  <a href="#mindspore-install" class="md-nav__link">
     <span class="md-ellipsis">
-      3. MindSpore Install
+      MindSpore Install
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-mindspore-lite-install" class="md-nav__link">
+  <a href="#mindspore-lite-install" class="md-nav__link">
     <span class="md-ellipsis">
-      4. MindSpore Lite Install
+      MindSpore Lite Install
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-mindocr-install" class="md-nav__link">
+  <a href="#mindocr-install" class="md-nav__link">
     <span class="md-ellipsis">
-      5. MindOCR Install
+      MindOCR Install
     </span>
   </a>
   
@@ -1403,7 +1403,7 @@
 
 <h2 id="offline-inference-environment-installation">Offline Inference Environment Installation<a class="headerlink" href="#offline-inference-environment-installation" title="Permanent link">&para;</a></h2>
 <p>This tutorial only covers the environment installation of MindOCR for offline inference on Atlas 300 series inference devices.</p>
-<h3 id="1-version-matching-table">1. Version Matching Table<a class="headerlink" href="#1-version-matching-table" title="Permanent link">&para;</a></h3>
+<h3 id="version-matching-table">Version Matching Table<a class="headerlink" href="#version-matching-table" title="Permanent link">&para;</a></h3>
 <p>Please refer to the version matching table when setting up the inference environment. It is recommended to use MindSpore 2.2.14 for inference.</p>
 <p>The version of Driver and Firmware is different for different chips. Please download the matched <a href="https://www.hiascend.com/en/hardware/firmware-drivers/community?product=2&amp;model=3&amp;cann=7.0.0.beta1&amp;driver=1.0.22.alpha">driver and firmware</a> according to the <a href="https://www.hiascend.com/en/software/cann/community">CANN package</a> version.</p>
 <p>Now, we taking Atlas 300I Inference Card (Model: 3010) run on x86 CPU as an example, introduce version matching relationship. The following installation version is also introduced using this as an example.</p>
@@ -1428,7 +1428,7 @@
 </tbody>
 </table>
 <p><strong>Other MindSpore and Ascend software version matching please refer to <a href="https://www.mindspore.cn/install">MindSpore Install</a>.</strong></p>
-<h3 id="2-ascend-environment-installation">2. Ascend Environment Installation<a class="headerlink" href="#2-ascend-environment-installation" title="Permanent link">&para;</a></h3>
+<h3 id="ascend-environment-installation">Ascend Environment Installation<a class="headerlink" href="#ascend-environment-installation" title="Permanent link">&para;</a></h3>
 <p>There are two versions of the Ascend software package, the commercial edition and the community edition. The commercial edition is only for commercial customers and download is restricted; The community edition can be freely downloaded, and the following examples all use the community edition.</p>
 <p>This example uses the Ascend package that comes with MindSpore 2.2.14, other MindSpore version please refer to <a href="https://www.mindspore.cn/install/en#installing-ascend-ai-processor-software-package">Installing Ascend AI processor software package</a>.</p>
 <table>
@@ -1484,13 +1484,13 @@ reboot
 <h4 id="configure-environment-variables">Configure Environment Variables<a class="headerlink" href="#configure-environment-variables" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>/usr/local/Ascend/nnae/set_env.sh
 </code></pre></div>
-<h3 id="3-mindspore-install">3. MindSpore Install<a class="headerlink" href="#3-mindspore-install" title="Permanent link">&para;</a></h3>
+<h3 id="mindspore-install">MindSpore Install<a class="headerlink" href="#mindspore-install" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">mindspore</span><span class="o">==</span><span class="m">2</span>.2.14
 
 <span class="c1"># Check version number, offline inference MindSpore only uses CPU</span>
 python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import mindspore;mindspore.set_context(device_target=&#39;CPU&#39;);mindspore.run_check()&quot;</span>
 </code></pre></div>
-<h3 id="4-mindspore-lite-install">4. MindSpore Lite Install<a class="headerlink" href="#4-mindspore-lite-install" title="Permanent link">&para;</a></h3>
+<h3 id="mindspore-lite-install">MindSpore Lite Install<a class="headerlink" href="#mindspore-lite-install" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1525,7 +1525,7 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;i
 <p>If interface with python, install the required whl package using pip.</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mindspore_lite-2.2.14-<span class="o">{</span>python_version<span class="o">}</span>-linux_<span class="o">{</span>arch<span class="o">}</span>.whl
 </code></pre></div>
-<h3 id="5-mindocr-install">5. MindOCR Install<a class="headerlink" href="#5-mindocr-install" title="Permanent link">&para;</a></h3>
+<h3 id="mindocr-install">MindOCR Install<a class="headerlink" href="#mindocr-install" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mindspore-lab/mindocr.git
 <span class="nb">cd</span><span class="w"> </span>mindocr
 pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.

@@ -723,16 +723,17 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-load-image-and-annotations" class="md-nav__link">
+    <nav class="md-nav" aria-label="Text detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-image-and-annotations" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Load image and annotations
+      Load image and annotations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Load image and annotations">
+    <nav class="md-nav" aria-label="Load image and annotations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -766,15 +767,15 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-image-and-annotation-processingaugmentation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#image-and-annotation-processingaugmentation" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Image and annotation processing/augmentation
+      Image and annotation processing/augmentation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Image and annotation processing/augmentation">
+    <nav class="md-nav" aria-label="Image and annotation processing/augmentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -792,6 +793,11 @@
       ColorJitter
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1462,16 +1468,17 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-load-image-and-annotations" class="md-nav__link">
+    <nav class="md-nav" aria-label="Text detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-image-and-annotations" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Load image and annotations
+      Load image and annotations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Load image and annotations">
+    <nav class="md-nav" aria-label="Load image and annotations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1505,15 +1512,15 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-image-and-annotation-processingaugmentation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#image-and-annotation-processingaugmentation" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Image and annotation processing/augmentation
+      Image and annotation processing/augmentation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Image and annotation processing/augmentation">
+    <nav class="md-nav" aria-label="Image and annotation processing/augmentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1531,6 +1538,11 @@
       ColorJitter
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1573,10 +1585,10 @@
 
 <h1 id="transformation-tutorial">Transformation Tutorial<a class="headerlink" href="#transformation-tutorial" title="Permanent link">&para;</a></h1>
 <p><a href="https://download.mindspore.cn/toolkits/mindocr/tutorials/transform_tutorial.ipynb"><img alt="Download Notebook" src="https://mindspore-website.obs.cn-north-4.myhuaweicloud.com/website-images/r1.8/resource/_static/logo_notebook.png" /></a>&emsp;</p>
-<h3 id="mechanism">Mechanism<a class="headerlink" href="#mechanism" title="Permanent link">&para;</a></h3>
-<ol>
+<h2 id="mechanism">Mechanism<a class="headerlink" href="#mechanism" title="Permanent link">&para;</a></h2>
+<ul>
 <li>Each transformation is a class with a callable function. An example is as follows</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ToCHWImage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; convert hwc image to chw image</span>
 <span class="sd">    required keys: image</span>
@@ -1593,14 +1605,14 @@
         <span class="n">data</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">transpose</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">data</span>
 </code></pre></div>
-<ol start="2">
+<ul>
 <li>
 <p>The input for transformation is always a dict, which contain data info like img_path, raw label, etc.</p>
 </li>
 <li>
 <p>The transformation api should have clarify the required keys in input and the modified or/and added keys in output the data dict.</p>
 </li>
-</ol>
+</ul>
 <p>Available transformations can be checked in <code>mindocr/data/transforms/*_transform.py</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># import and check available transforms</span>
 
@@ -1618,8 +1630,8 @@
  &#39;EastRandomCropData&#39;,
  &#39;PSERandomCrop&#39;]
 </code></pre></div>
-<h3 id="text-detection">Text detection<a class="headerlink" href="#text-detection" title="Permanent link">&para;</a></h3>
-<h3 id="1-load-image-and-annotations">1. Load image and annotations<a class="headerlink" href="#1-load-image-and-annotations" title="Permanent link">&para;</a></h3>
+<h2 id="text-detection">Text detection<a class="headerlink" href="#text-detection" title="Permanent link">&para;</a></h2>
+<h3 id="load-image-and-annotations">Load image and annotations<a class="headerlink" href="#load-image-and-annotations" title="Permanent link">&para;</a></h3>
 <h4 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
 <span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
@@ -1696,7 +1708,7 @@ raw annotation:  [{&quot;transcription&quot;: &quot;where&quot;, &quot;points&qu
 <div class="highlight"><pre><span></span><code>[&#39;where&#39;, &#39;people&#39;, &#39;meet&#39;, &#39;###&#39;, &#39;###&#39;, &#39;###&#39;, &#39;###&#39;, &#39;###&#39;, &#39;###&#39;]
 </code></pre></div>
 <p><img alt="output_16_1" src="https://user-images.githubusercontent.com/20376974/228161131-c11209d1-f3f0-4a8c-a763-b72d729a4084.png" /></p>
-<h3 id="2-image-and-annotation-processingaugmentation">2. Image and annotation processing/augmentation<a class="headerlink" href="#2-image-and-annotation-processingaugmentation" title="Permanent link">&para;</a></h3>
+<h3 id="image-and-annotation-processingaugmentation">Image and annotation processing/augmentation<a class="headerlink" href="#image-and-annotation-processingaugmentation" title="Permanent link">&para;</a></h3>
 <h4 id="randomcrop-eastrandomcropdata">RandomCrop - EastRandomCropData<a class="headerlink" href="#randomcrop-eastrandomcropdata" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mindocr.data.transforms.general_transforms</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomCropWithBBox</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
