@@ -3,4 +3,4 @@ hide:
   - navigation
 ---
 
-{% include-markdown "./README.md" %}
+{% include-markdown "../../README.md" %}
