@@ -5,14 +5,7 @@ There are two ways to train on the Ascend AI processor: by running scripts with 
 
 > Please ensure that the `distribute` parameter in the yaml file is set to `True` before running the following commands for distributed training.
 
-- [Distributed parallel training](#distributed-parallel-training)
-  - [1. Ascend](#1-ascend)
-    - [1.1 Run scripts with OpenMPI](#11-run-scripts-with-openmpi)
-    - [1.2 Configure RANK\_TABLE\_FILE for training](#12-configure-rank_table_file-for-training)
-      - [1.2.1 Running on Eight (All) Devices](#121-running-on-eight-all-devices)
-      - [1.2.2 Running on Four (Partial) Devices](#122-running-on-four-partial-devices)
-
-## 1. Ascend
+## Ascend
 
 **Notes**:
 
@@ -23,7 +16,7 @@ On Ascend platform, some common restrictions on using the distributed service ar
 - Each host has four devices numbered 0 to 3 and four devices numbered 4 to 7 deployed on two different networks. During training of 2 or 4 devices, the devices must be connected and clusters cannot be created across networks. This means, when training with 4 devices, only `{0, 1, 2, 3}` and  `{4, 5, 6, 7}` are available. While in training with 2 devices, devices cross networks, such as `{0, 4}` are not allowed. However, devices within networks, such as `{0, 1}`or `{1, 2}`, are allowed.
 
 
-### 1.1 Run scripts with OpenMPI
+### Run scripts with OpenMPI
 
 On Ascend hardware platform, users can use OpenMPI's `mpirun` to run distributed training with `n` devices. For example, in [DBNet Readme](https://github.com/mindspore-lab/mindocr/blob/main/configs/det/dbnet/README.md#34-training), the following command is used to train the model on devices `0` and `1`:
 
@@ -34,9 +27,9 @@ mpirun --allow-run-as-root -n 2 python tools/train.py --config configs/det/dbnet
 
 > Note that `mpirun` will run training on sequential devices starting from device `0`. For example, `mpirun -n 4 python-command` will run training on the four devices: `{0, 1, 2, 3}`.
 
-### 1.2 Configure RANK_TABLE_FILE for training
+### Configure RANK_TABLE_FILE for training
 
-#### 1.2.1 Running on Eight (All) Devices
+#### Running on Eight (All) Devices
 
 Before using this method for distributed training, it is necessary to create an HCCL configuration file in json format,
 i.e. generate RANK_TABLE_FILE. The following is the command to generate the corresponding configuration file for 8 devices
@@ -141,7 +134,7 @@ When training other models, simply replace the yaml config file path in the scri
 
 After the training has started, and you can find the training log `train.log` in the project root directory.
 
-#### 1.2.2 Running on Four (Partial) Devices
+#### Running on Four (Partial) Devices
 
 To run training on four devices, for example, `{4, 5, 6, 7}`, the `RANK_TABLE_FILE` and the run script are different from those for running on eight devices.
 

@@ -310,7 +310,7 @@ Example 1：
 The sample image is `configs/table/example.png`. The inference result is as follows:
 
 <p align="center">
-  <img src="../../../configs/table/example_structure.png" width=1000 />
+  <img src="https://github.com/Bruce-py/mindocr/blob/main/configs/layout/yolov8/images/example_structure.png" width=1000 />
 </p>
 <p align="center">
   <em> example_structure.png </em>
@@ -387,7 +387,7 @@ After running, the inference results will be saved in `{args.draw_img_save_dir}/
 
 Example 1:
 <p align="center">
-  <img src="../../../configs/layout/yolov8/images/result.png" width=480>
+  <img src="https://github.com/Bruce-py/mindocr/blob/main/configs/layout/yolov8/images/result.png" width=480>
 </p>
 <p align="center">
   <em> Visualization of layout analysis result on PMC4958442_00003.jpg</em>
@@ -436,7 +436,7 @@ After running, the inference results will be saved in `{args.draw_img_save_dir}/
 Example 1:
 
 <p align="center">
-  <img src="../../../configs/layout/yolov8/images/example_docx.png"/>
+  <img src="https://github.com/Bruce-py/mindocr/blob/main/configs/layout/yolov8/images/example_docx.png"/>
 </p>
 <p align="center">
   <em> PMC4958442_00003.jpg Converting into docx </em>
