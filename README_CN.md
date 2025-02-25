@@ -30,7 +30,7 @@
 
 <!--start-->
 ## 简介
-MindOCR是一个基于[MindSpore](https://www.mindspore.cn/en) 框架开发的OCR开源工具箱，集成系列主流文字检测识别的算法、模型，并提供易用的训练和推理工具，可以帮助用户快速开发和应用业界SoTA文本检测、文本识别模型，如DBNet/DBNet++和CRNN/SVTR，满足图像文档理解的需求。
+MindOCR是一个基于[MindSpore](https://www.mindspore.cn/) 框架开发的OCR开源工具箱，集成系列主流文字检测识别的算法、模型，并提供易用的训练和推理工具，可以帮助用户快速开发和应用业界SoTA文本检测、文本识别模型，如DBNet/DBNet++和CRNN/SVTR，满足图像文档理解的需求。
 
 
 <details open markdown>
@@ -219,7 +219,7 @@ python tools/infer/text/predict_system.py --image_dir {path_to_img or dir_to_img
 
 ### 3. 模型离线推理
 
-你可以在MindOCR中对**MindOCR原生模型**或**第三方模型**（如PaddleOCR、MMOCR等）进行MindSpore Lite推理。详情请参考[模型离线推理教程](docs/zh/inference/inference_tutorial.md)。
+你可以在MindOCR中对 **MindOCR原生模型** 或 **第三方模型**（如PaddleOCR、MMOCR等）进行MindSpore Lite推理。详情请参考[模型离线推理教程](docs/zh/inference/inference_tutorial.md)。
 
 ## <span id="使用教程">使用教程</span>
 

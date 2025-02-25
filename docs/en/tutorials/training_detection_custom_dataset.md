@@ -327,4 +327,4 @@ python infer.py \
     --res_save_dir=results_dir
 ```
 
-Please refer to the [Inference Tutorials](../inference/inference_tutorial.md) chapter `4.1 Command example` on more examples of inference commands.
+Please refer to the [Inference Tutorials](../inference/inference_tutorial.md) chapter `Inference(Python)` on more examples of inference commands.

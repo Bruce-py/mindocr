@@ -321,4 +321,4 @@ python infer.py \
     --res_save_dir=results_dir
 ```
 
-请参考[推理教程](../inference/inference_tutorial.md)的`4.1 命令示例`章节获取更多例子。
+请参考[推理教程](../inference/inference_tutorial.md)的`推理(Python)`章节获取更多例子。
