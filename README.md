@@ -274,7 +274,7 @@ You can do MindSpore Lite inference in MindOCR using **MindOCR models** or **Thi
 <summary>Key Information Extraction</summary>
 
 - [x] [LayoutXLM](configs/kie/vi_layoutxlm/README.md) (arXiv'2021)
-- [x] [LayoutLMv3](configs/kie/layoutlmv3/README.md) (arXiv'2022)
+- [x] [LayoutLMv3](configs/layout/layoutlmv3/README.md) (arXiv'2022)
 
 </details>
 
@@ -362,7 +362,7 @@ Frequently asked questions about configuring environment and mindocr, please ref
 
 - 2023/04/01
 1. Add new trained models
-    - [LayoutLMv3](configs/kie/layoutlmv3/) for key information extraction
+    - [LayoutLMv3](configs/layout/layoutlmv3/) for key information extraction
 
 - 2024/03/20
 1. Add new trained models

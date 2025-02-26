@@ -275,7 +275,7 @@ python tools/infer/text/predict_system.py --image_dir {path_to_img or dir_to_img
 <summary>关键信息抽取</summary>
 
 - [x] [LayoutXLM](configs/kie/vi_layoutxlm/README_CN.md) (arXiv'2021)
-- [x] [LayoutLMv3](configs/kie/layoutlmv3/README_CN.md) (arXiv'2022)
+- [x] [LayoutLMv3](configs/layout/layoutlmv3/README_CN.md) (arXiv'2022)
 
 </details>
 
@@ -365,7 +365,7 @@ MindOCR提供了[数据格式转换工具](https://github.com/mindspore-lab/mind
 
 - 2023/04/01
 1. 增加新模型
-    - 关键信息抽取[LayoutLMv3](configs/kie/layoutlmv3/)
+    - 关键信息抽取[LayoutLMv3](configs/layout/layoutlmv3/)
 
 - 2024/03/20
 1. 增加新模型

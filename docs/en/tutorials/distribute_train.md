@@ -1,7 +1,7 @@
 # Distributed parallel training
 
 This document provides a tutorial on distributed parallel training.
-There are two ways to train on the Ascend AI processor: by running scripts with OpenMPI or configuring `RANK_TABLE_FILE` for training.
+There are three ways to train on the Ascend AI processor: by running scripts with MSRun or OpenMPI or configuring `RANK_TABLE_FILE` for training. Refer to [MindSpore Distributed Parallel Startup Methods](https://www.mindspore.cn/docs/en/master/model_train/parallel/startup_method.html) for more details.
 
 > Please ensure that the `distribute` parameter in the yaml file is set to `True` before running the following commands for distributed training.
 
@@ -15,6 +15,18 @@ On Ascend platform, some common restrictions on using the distributed service ar
 
 - Each host has four devices numbered 0 to 3 and four devices numbered 4 to 7 deployed on two different networks. During training of 2 or 4 devices, the devices must be connected and clusters cannot be created across networks. This means, when training with 4 devices, only `{0, 1, 2, 3}` and  `{4, 5, 6, 7}` are available. While in training with 2 devices, devices cross networks, such as `{0, 4}` are not allowed. However, devices within networks, such as `{0, 1}`or `{1, 2}`, are allowed.
 
+### Run scripts with MSRun
+
+On Ascend hardware platform, users can use MindSpore's `msrun` to run distributed training with `n` devices. For example, in [DBNet Readme](https://github.com/mindspore-lab/mindocr/blob/main/configs/det/dbnet/README.md#34-training), the following command is used to train the model on devices `0` and `1`:
+
+```shell
+# worker_num is the total number of Worker processes participating in the distributed task. 
+# local_worker_num is the number of Worker processes pulled up on the current node. 
+# The number of processes is equal to the number of NPUs used for training. In the case of single-machine multi-card worker_num and local_worker_num must be the same.
+msrun --worker_num 2 --local_worker_num 2 tools/train.py --config configs/det/dbnet/db_r50_icdar15.yaml
+```
+
+> Note that `msrun` will run training on sequential devices starting from device `0`. For example, `msrun --worker_num 4 --local_worker_num 4 start-scriptd` will run training on the four devices: `{0, 1, 2, 3}`.
 
 ### Run scripts with OpenMPI
 
