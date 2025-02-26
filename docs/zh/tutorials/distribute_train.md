@@ -41,6 +41,8 @@ mpirun --allow-run-as-root -n 2 python tools/train.py --config configs/det/dbnet
 
 ### 配置RANK_TABLE_FILE进行训练
 
+> 请注意，rank_table 启动方式将在MindSpore 2.4版本废弃。
+
 #### 使用八个（全部）设备进行训练
 
 使用此种方法在进行分布式训练前需要创建json格式的HCCL配置文件，即生成RANK_TABLE_FILE文件，以下为生成8卡相应配置文件命令，更具体信息及相应脚本参见[hccl_tools](https://gitee.com/mindspore/models/tree/master/utils/hccl_tools)中的说明，

@@ -41,6 +41,8 @@ mpirun --allow-run-as-root -n 2 python tools/train.py --config configs/det/dbnet
 
 ### Configure RANK_TABLE_FILE for training
 
+> Note that rank_table method will be deprecated in MindSpore 2.4 version.
+
 #### Running on Eight (All) Devices
 
 Before using this method for distributed training, it is necessary to create an HCCL configuration file in json format,
